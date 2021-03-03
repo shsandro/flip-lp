@@ -9,6 +9,7 @@ import {
   useTheme,
 } from "@material-ui/core";
 import React from "react";
+import Fade from 'react-reveal/Fade';
 import Gears from "../components/Gears";
 
 const useStyles = makeStyles((theme) => ({
@@ -119,7 +120,9 @@ const Showcase = () => {
                 </Grid>
                 <Grid item xs={4} style={{ position: "relative" }}>
                   <div className={classes.gears}>
-                    <Gears strokeWidth={0.1} />
+                    <Fade>
+                      <Gears strokeWidth={0.1} />
+                    </Fade>
                   </div>
                 </Grid>
               </Grid>
