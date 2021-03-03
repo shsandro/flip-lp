@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import React from "react";
-import ExplanatoryGroup from "../components/ExplanatoryGroup";
+import ExplanatoryGroup from "./ExplanatoryGroup";
 import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Explanation = () => {
+const OnePlaceSection = () => {
   const classes = useStyles();
   return (
     <section className={classes.root}>
@@ -30,7 +30,7 @@ const Explanation = () => {
           <Grid container spacing={5}>
             <Grid item xs={12}>
               <Fade top>
-                <Typography color="textSecondary" align="center" variant="h3">
+                <Typography color="textSecondary" align="center" variant="h4">
                   <Box fontFamily="Gilroy-ExtraBold">
                     Tudo o que sua imobiliária precisa{" "}
                     <Box component="span" className={classes.contrastText}>
@@ -50,4 +50,4 @@ const Explanation = () => {
   );
 };
 
-export default Explanation;
+export default OnePlaceSection;
