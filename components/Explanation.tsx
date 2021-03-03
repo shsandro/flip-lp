@@ -27,7 +27,7 @@ const Explanation = () => {
           <Grid container spacing={5}>
             <Grid item xs={12}>
               <Fade top>
-                <Typography align="center" variant="h3">
+                <Typography color="textSecondary" align="center" variant="h3">
                   <Box fontFamily="Gilroy-ExtraBold">
                     Tudo o que sua imobiliária precisa{" "}
                     <Box component="span" className={classes.contrastText}>
