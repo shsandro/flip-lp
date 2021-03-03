@@ -12,11 +12,13 @@ import Fade from "react-reveal/Fade";
 const useStyles = makeStyles((theme) => ({
   contrastText: {
     color: theme.palette.primary.main,
-    overflow: "hidden",
   },
   root: {
     backgroundColor: theme.palette.grey[50],
   },
+  hideScroll: {
+    overflow: "hidden",
+  }
 }));
 
 const Explanation = () => {
@@ -38,7 +40,7 @@ const Explanation = () => {
                 </Typography>
               </Fade>
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} className={classes.hideScroll}>
               <ExplanatoryGroup />
             </Grid>
           </Grid>
