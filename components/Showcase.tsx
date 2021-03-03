@@ -55,7 +55,7 @@ const Showcase = () => {
   return (
     <section>
       <Container>
-        <Box pb={6}>
+        <Box pb={8}>
           <Grid container direction={isDownMd ? "column-reverse" : "row"}>
             <Grid item sm={12} md={5} className={classes.flexContainer}>
               <Grid
@@ -64,7 +64,7 @@ const Showcase = () => {
                 className={classes.fullHeight}
               >
                 <Grid item xs={3} sm={2} md={3}>
-                  <Box pt={6}>
+                  <Box pt={8}>
                     <img src="/flip-logo.svg" width="100%" />
                   </Box>
                 </Grid>
@@ -92,7 +92,7 @@ const Showcase = () => {
                       >
                         Nós temos a fórmula para manter o seu lead aquecido e o
                         corretor comprometido, e o melhor... tudo em uma só
-                        plataforma
+                        plataforma.
                       </Typography>
                     </Grid>
                     <Grid item xs={12} sm={6}>
