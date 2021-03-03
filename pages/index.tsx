@@ -3,7 +3,9 @@ import Showcase from '../components/Showcase';
 
 const index = () => {
   return (
+    <>
       <Showcase />
+    </>
   );
 }
 

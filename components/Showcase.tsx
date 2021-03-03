@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   flexContainer: {
     display: "flex",
     [theme.breakpoints.down("sm")]: {
-        marginTop: "-30%",
+      marginTop: "-30%",
     },
   },
   imgSize: {
@@ -68,39 +68,41 @@ const Showcase = () => {
                   </Box>
                 </Grid>
                 <Grid item md={10}>
-                  <Typography variant="h3" color="textSecondary">
-                    <Box fontFamily="Gilroy-ExtraBold" pt={4} pb={4}>
-                      Transforme
-                      <br />
-                      leads em{" "}
-                      <Box component="span" className={classes.contrastText}>
-                        clientes!
-                      </Box>
-                    </Box>
-                  </Typography>
-
-                  <Typography
-                    color="textSecondary"
-                    className={classes.textSize}
-                  >
-                    <Box pb={4}>
-                      Nós temos a fórmula para manter o seu lead aquecido e o
-                      corretor comprometido, e o melhor... tudo em uma só
-                      plataforma
-                    </Box>
-                  </Typography>
-                  <Grid container>
+                  <Grid container spacing={4}>
+                    <Grid item xs={12}>
+                      <Typography variant="h3" color="textSecondary">
+                        <Box fontFamily="Gilroy-ExtraBold" pt={6}>
+                          Transforme
+                          <br />
+                          leads em{" "}
+                          <Box
+                            component="span"
+                            className={classes.contrastText}
+                          >
+                            clientes!
+                          </Box>
+                        </Box>
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Typography
+                        color="textSecondary"
+                        className={classes.textSize}
+                      >
+                        Nós temos a fórmula para manter o seu lead aquecido e o
+                        corretor comprometido, e o melhor... tudo em uma só
+                        plataforma
+                      </Typography>
+                    </Grid>
                     <Grid item xs={6}>
-                      <Box pb={2}>
-                        <Button
-                          variant="contained"
-                          size="large"
-                          color="primary"
-                          fullWidth
-                        >
-                          Saiba mais
-                        </Button>
-                      </Box>
+                      <Button
+                        variant="contained"
+                        size="large"
+                        color="primary"
+                        fullWidth
+                      >
+                        Saiba mais
+                      </Button>
                     </Grid>
                   </Grid>
                 </Grid>
