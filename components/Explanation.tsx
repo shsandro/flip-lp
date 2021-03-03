@@ -12,6 +12,7 @@ import Fade from "react-reveal/Fade";
 const useStyles = makeStyles((theme) => ({
   contrastText: {
     color: theme.palette.primary.main,
+    overflow: "hidden",
   },
   root: {
     backgroundColor: theme.palette.grey[50],
