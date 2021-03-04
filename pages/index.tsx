@@ -1,14 +1,18 @@
 import React from 'react';
 import OnePlaceSection from '../components/OnePlaceSection';
 import AdvantagesSection from '../components/AdvantagesSection';
-import Showcase from '../components/Showcase';
+import ShowcaseSection from '../components/ShowcaseSection';
+import SignUpSection from '../components/SignUpSection';
+import FooterSection from '../components/FooterSection';
 
 const index = () => {
   return (
     <>
-      <Showcase />
+      <ShowcaseSection />
       <OnePlaceSection />
       <AdvantagesSection />
+      <SignUpSection />
+      <FooterSection />
     </>
   );
 }

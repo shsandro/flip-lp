@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
   },
   root: {
-    backgroundColor: theme.palette.grey[50],
+    backgroundColor: theme.palette.grey[100],
   },
   hideScroll: {
     overflow: "hidden",
