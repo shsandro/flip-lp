@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 type LuneteProps = {
-  strokeWidth: number,
+  strokeWidth?: number,
 };
 
 const Lunete = (props:LuneteProps) => {
