@@ -14,6 +14,14 @@ export type ExplanatoryCardProps = {
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100%",
+    transition: theme.transitions.create(['margin-top', 'box-shadow'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.short,
+    }),
+    '&:hover': {
+      marginTop: -10,
+      boxShadow: theme.shadows[4],
+    } 
   },
   textSize: {
     height: theme.spacing(10),
@@ -31,7 +39,7 @@ const ExplanatoryCard = ({
 }: ExplanatoryCardProps) => {
   const classes = useStyles();
   return (
-    <Paper elevation={10} className={classes.root}>
+    <Paper elevation={0} className={classes.root}>
       <Box p={2}>
         <Grid container spacing={2}>
           <Grid item xs={12}>

@@ -11,6 +11,7 @@ import {
 import React from "react";
 import Fade from 'react-reveal/Fade';
 import Gears from "../components/Gears";
+import { goToSignUpType } from "../pages";
 
 const useStyles = makeStyles((theme) => ({
   gridImage: {
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Showcase = () => {
+const Showcase = ({ goToSignUp }:goToSignUpType) => {
   const classes = useStyles();
   const theme = useTheme();
   const isDownMd = useMediaQuery(theme.breakpoints.down("sm"));
@@ -101,6 +102,7 @@ const Showcase = () => {
                         size="large"
                         color="primary"
                         fullWidth
+                        onClick={goToSignUp}
                       >
                         Saiba mais
                       </Button>

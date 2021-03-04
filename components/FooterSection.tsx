@@ -6,6 +6,8 @@ import {
   IconButton,
   makeStyles,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@material-ui/core";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -13,12 +15,32 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import Fade from "react-reveal/Fade";
 import React from "react";
+import { goToSignUpType } from "../pages";
 
-const buttons = [
-  <FacebookIcon />,
-  <LinkedInIcon />,
-  <WhatsAppIcon />,
-  <InstagramIcon />,
+type SocialNetworks = {
+  icon: React.ReactNode;
+  link: string;
+  label: string;
+};
+
+const socialNetworks: SocialNetworks[] = [
+  {
+    icon: <FacebookIcon />,
+    link: "https://facebook.com/flipcrm",
+    label: "Facebook",
+  },
+  {
+    icon: <InstagramIcon />,
+    link: "https://instagram.com/crmflip",
+    label: "Instagram",
+  },
+  // { icon: <LinkedInIcon />, link: "https://LinkedIn.com/", label: "LinkedIn" },
+  {
+    icon: <WhatsAppIcon />,
+    link:
+      "https://api.whatsapp.com/send?phone=5544998180537&text=Ol%C3%A1%20Andr%C3%A9%2C%20visitei%20a%20sua%20p%C3%A1gina%20e%20gostaria%20de%20entender%20melhor%20como%20eu%20automatizo%20o%20processo%20dos%20meus%20leads",
+    label: "WhatsApp",
+  },
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -37,25 +59,32 @@ const useStyles = makeStyles((theme) => ({
     height: "350vw",
     position: "absolute",
     borderRadius: "70%",
-    top: "10%",
+    top: 0,
     zIndex: -1,
   },
   footerBg: {
-      justifyContent: 'center',
-      height: 100,
-      overflow: 'hidden',
-      position: 'relative',
-      [theme.breakpoints.down('sm')]:{
-          height: 175,
-      }
+    display: "flex",
+    justifyContent: "center",
+    overflow: "hidden",
+    position: "relative",
+    height: theme.spacing(13),
+  },
+  imgLogo: {
+    marginTop: "0.6%",
   },
 }));
-const FooterSection = () => {
+const FooterSection = ({ goToSignUp }: goToSignUpType) => {
   const classes = useStyles();
+  const theme = useTheme();
+  const isCellphone = useMediaQuery(theme.breakpoints.down("xs"));
+  const navigateTo = (link: string) => {
+    const win = window.open(link, "_blank");
+    win.focus();
+  };
   return (
     <section>
-      <Container>
-        <Box pt={8}>
+      <Box pt={8}>
+        <Container>
           <Grid container spacing={10}>
             <Grid item xs={12} sm={6}>
               <Grid container spacing={4}>
@@ -77,7 +106,7 @@ const FooterSection = () => {
                       color="textSecondary"
                       className={classes.textSize}
                     >
-                      Clique aqui para entrar em contato através do whats,
+                      Clique aqui para entrar em contato através do WhatsApp,
                       nossos consultores estão prontos para atendê-lo
                     </Typography>
                   </Fade>
@@ -89,6 +118,11 @@ const FooterSection = () => {
                       color="primary"
                       variant="contained"
                       fullWidth
+                      onClick={() => {
+                        navigateTo(
+                          "https://api.whatsapp.com/send?phone=5544998180537&text=Ol%C3%A1%20Andr%C3%A9%2C%20visitei%20a%20sua%20p%C3%A1gina%20e%20gostaria%20de%20entender%20melhor%20como%20eu%20automatizo%20o%20processo%20dos%20meus%20leads"
+                        );
+                      }}
                     >
                       Conversar
                     </Button>
@@ -128,6 +162,7 @@ const FooterSection = () => {
                       color="primary"
                       variant="contained"
                       fullWidth
+                      onClick={goToSignUp}
                     >
                       Agendar
                     </Button>
@@ -136,46 +171,57 @@ const FooterSection = () => {
               </Grid>
             </Grid>
           </Grid>
-        </Box>
-      </Container>
+        </Container>
+      </Box>
       <Box pt={10}>
-        <Grid
-          container
-          alignItems="center"
-          alignContent="center"
-          className={classes.footerBg}
-        >
-            <div className={classes.circle} />
-          <Grid item xs={12}>
-            <Grid container justify="center" alignItems="center">
-              <Grid item xs={10} sm={6} md={4} lg={3} xl={2}>
-                <Fade left>
-                  <Typography variant="body1" className={classes.whiteText}>
-                    <Box component="span" pr={1}>
-                      <img
-                        alt="logo-flip"
-                        src="/flip-logo_branca.svg"
-                        width="15%"
-                      />
-                    </Box>
-                    Transforme leads em clientes!
-                  </Typography>
-                </Fade>
-              </Grid>
-              <Fade right>
-                <Grid item xs={12} sm="auto">
-                  {buttons.map((button) => {
-                    return (
-                      <IconButton className={classes.whiteText}>
-                        {button}
-                      </IconButton>
-                    );
-                  })}
+        <Box className={classes.footerBg} pt={2}>
+          <div className={classes.circle} />
+          <Container>
+            <Grid
+              container
+              spacing={isCellphone ? 2 : 10}
+              justify="center"
+              alignItems="center"
+            >
+              <Grid item xs="auto" sm={6}>
+                <Grid
+                  container
+                  alignItems="center"
+                  justify="flex-end"
+                  spacing={2}
+                >
+                  {!isCellphone && (
+                    <Grid item sm={2} lg={1} className={classes.imgLogo}>
+                      <img src="/flip-logo_branca.svg" />
+                    </Grid>
+                  )}
+                  <Grid item xs={12} sm="auto">
+                    <Typography variant="caption" className={classes.whiteText}>
+                      Transforme Leads em Clientes!
+                    </Typography>
+                  </Grid>
                 </Grid>
-              </Fade>
+              </Grid>
+              <Grid item xs="auto" sm={6}>
+                {socialNetworks.map((network) => {
+                  return (
+                    <IconButton
+                      edge="start"
+                      key={network.label}
+                      title={network.label}
+                      className={classes.whiteText}
+                      onClick={() => {
+                        navigateTo(network.link);
+                      }}
+                    >
+                      {network.icon}
+                    </IconButton>
+                  );
+                })}
+              </Grid>
             </Grid>
-          </Grid>
-        </Grid>
+          </Container>
+        </Box>
       </Box>
     </section>
   );

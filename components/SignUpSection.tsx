@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
 const SignUpSection = () => {
   const classes = useStyles();
   return (
-    <section className={classes.bg}>
+    <section id="signup-section" className={classes.bg}>
       <Container>
         <Box pt={8} pb={8}>
           <Grid container justify="space-between" alignItems="center" spacing={3}>
