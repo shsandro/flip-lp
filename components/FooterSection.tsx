@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     overflow: "hidden",
     position: "relative",
-    height: theme.spacing(13),
+    height: theme.spacing(7),
   },
   imgLogo: {
     marginTop: "0.6%",
