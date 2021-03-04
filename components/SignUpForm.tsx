@@ -9,17 +9,17 @@ import {
   Slide,
   TextField,
   Typography,
-} from "@material-ui/core";
-import React, { useRef, useState } from "react";
+} from '@material-ui/core';
+import React, { useRef, useState } from 'react';
+import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
+import Reward from 'react-rewards';
 import {
   FormValuesType,
   schemaValidator,
   validate,
-} from "./SignUpFormValidators";
-import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
-import Reward from "react-rewards";
+} from './SignUpFormValidators';
 
 export type UserDataType = {
   email: string;
@@ -30,35 +30,30 @@ export type UserDataType = {
 
 const useStyles = makeStyles((theme) => ({
   paperStyle: {
-    overflow: "hidden",
-    position: "relative",
-  },
-  typoText: {
-    [theme.breakpoints.only("xs")]: {
-      fontSize: "30px",
-    },
+    overflow: 'hidden',
+    position: 'relative',
   },
   rewardGrid: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
     backgroundColor: theme.palette.success.light,
-    height: "100%",
-    width: "100%",
+    height: '100%',
+    width: '100%',
     zIndex: theme.zIndex.tooltip,
     color: theme.palette.common.white,
   },
   errorSubmit: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
     backgroundColor: theme.palette.warning.light,
-    height: "100%",
-    width: "100%",
+    height: '100%',
+    width: '100%',
     zIndex: theme.zIndex.tooltip,
     color: theme.palette.common.white,
   },
@@ -75,13 +70,13 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(10),
   },
   wrapper: {
-    position: "relative",
+    position: 'relative',
   },
   buttonProgress: {
     color: theme.palette.primary.main,
-    position: "absolute",
-    top: "50%",
-    left: "50%",
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
     marginTop: -12,
     marginLeft: -12,
   },
@@ -110,7 +105,7 @@ const SignUpForm = () => {
 
   const handleOnChange = (
     field: string,
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const values = formValues;
     values[field] = e.currentTarget.value;
@@ -126,11 +121,13 @@ const SignUpForm = () => {
 
   const submit = async () => {
     setSubmiting(true);
-    const { email, name, city, phone } = formValues;
+    const {
+      email, name, city, phone,
+    } = formValues;
 
     const errors: FormValuesType = validate(
-      ["email", "name", "city", "phone"],
-      formValues
+      ['email', 'name', 'city', 'phone'],
+      formValues,
     );
     setFormErrors(errors);
     if (
@@ -140,13 +137,13 @@ const SignUpForm = () => {
       const data: UserDataType = {
         email,
         name,
-        phone: phone.replace(/\D/g, ""),
+        phone: phone.replace(/\D/g, ''),
         city,
       };
 
-      const response = await fetch("/api/registration", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const response = await fetch('/api/registration', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
       const responseJson = await response.json();
@@ -245,8 +242,8 @@ const SignUpForm = () => {
                 <IconButton
                   onClick={() => {
                     const win = window.open(
-                      `https://api.whatsapp.com/send?phone=554499773127&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20da%20Flip%20e%20gostaria%20de%20tirar%20alguma%20d%C3%BAvidas.`,
-                      "_blank"
+                      'https://api.whatsapp.com/send?phone=554499773127&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20da%20Flip%20e%20gostaria%20de%20tirar%20alguma%20d%C3%BAvidas.',
+                      '_blank',
                     );
                     win.focus();
                   }}
@@ -274,10 +271,10 @@ const SignUpForm = () => {
               error={!!formErrors.name}
               helperText={formErrors.name}
               onChange={(e) => {
-                handleOnChange("name", e);
+                handleOnChange('name', e);
               }}
               onBlur={() => {
-                validateField("name");
+                validateField('name');
               }}
             />
           </Grid>
@@ -289,10 +286,10 @@ const SignUpForm = () => {
               error={!!formErrors.phone}
               helperText={formErrors.phone}
               onChange={(e) => {
-                handleOnChange("phone", e);
+                handleOnChange('phone', e);
               }}
               onBlur={() => {
-                validateField("phone");
+                validateField('phone');
               }}
             />
           </Grid>
@@ -304,10 +301,10 @@ const SignUpForm = () => {
               error={!!formErrors.email}
               helperText={formErrors.email}
               onChange={(e) => {
-                handleOnChange("email", e);
+                handleOnChange('email', e);
               }}
               onBlur={() => {
-                validateField("email");
+                validateField('email');
               }}
             />
           </Grid>
@@ -319,10 +316,10 @@ const SignUpForm = () => {
               error={!!formErrors.city}
               helperText={formErrors.city}
               onChange={(e) => {
-                handleOnChange("city", e);
+                handleOnChange('city', e);
               }}
               onBlur={() => {
-                validateField("city");
+                validateField('city');
               }}
             />
           </Grid>

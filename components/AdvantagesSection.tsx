@@ -5,41 +5,22 @@ import {
   Hidden,
   makeStyles,
   Typography,
-  useTheme,
-} from "@material-ui/core";
-import React, { useEffect } from "react";
-import SecondTitle from "./SecondTitle";
-import MotivesGroup from "./MotivesGroup";
-import Fade from "react-reveal/Fade";
-import Hero from "./Hero";
+} from '@material-ui/core';
+import React from 'react';
+import Fade from 'react-reveal/Fade';
+import SecondTitle from './SecondTitle';
+import MotivesGroup from './MotivesGroup';
+import Hero from './Hero';
 
 const useStyles = makeStyles((theme) => ({
   contrastText: {
     color: theme.palette.primary.main,
   },
-  capa: {
-    animation: `$oscill 1s ease-in-out infinite alternate`,
-    position: "relative",
-    boxShadow: "0 1px grey, 0 -1px gray",
-  },
-  "@keyframes oscill": {
-    "0%": {
-      top: "3%",
-      transform: "skewX(0deg)",
-    },
-    "100%": {
-      top: "-3%",
-      transform: "skewX(10deg)",
-    },
-  },
-  hideScroll: {
-    overflow: "unset",
-  },
   hero: {
-    transform: "scaleX(-1)",
+    transform: 'scaleX(-1)',
   },
   removeScroll: {
-    overflow: "hidden",
+    overflow: 'hidden',
   },
 }));
 
@@ -69,7 +50,8 @@ const AdvantagesSection = () => {
                   <Fade>
                     <Typography variant="h4" color="textSecondary">
                       <Box fontFamily="Gilroy-ExtraBold">
-                        Com a Flip{" "}
+                        Com a Flip
+                        {' '}
                         <Box component="span" className={classes.contrastText}>
                           você pode mais!
                         </Box>

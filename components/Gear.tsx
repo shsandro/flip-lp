@@ -1,7 +1,12 @@
-import React from "react";
+import React from 'react';
 
-const Gear = (props) => {
-  const { className, strokeWidth = 0.12, color = "#D2D3D5" } = props;
+export type AnimationPartsProps = {
+  className?: string,
+  strokeWidth?: number,
+  color?: string,
+};
+const Gear = (props:AnimationPartsProps) => {
+  const { className, strokeWidth = 0.12, color = '#D2D3D5' } = props;
   return (
     <svg viewBox="0 0 14 14" className={className}>
       <g>

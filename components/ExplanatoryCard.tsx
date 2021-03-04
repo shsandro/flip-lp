@@ -1,8 +1,9 @@
-import { Box, Grid, makeStyles, Paper, Typography } from "@material-ui/core";
-import { pink } from "@material-ui/core/colors";
+import {
+  Box, Grid, makeStyles, Paper, Typography,
+} from '@material-ui/core';
 import Fade from 'react-reveal/Fade';
-import React from "react";
-import SecondTitle from "./SecondTitle";
+import React from 'react';
+import SecondTitle from './SecondTitle';
 
 export type ExplanatoryCardProps = {
   src: string;
@@ -13,7 +14,7 @@ export type ExplanatoryCardProps = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: "100%",
+    height: '100%',
     transition: theme.transitions.create(['margin-top', 'box-shadow'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.short,
@@ -21,13 +22,13 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       marginTop: -10,
       boxShadow: theme.shadows[4],
-    } 
+    },
   },
   textSize: {
     height: theme.spacing(10),
-    [theme.breakpoints.only("xs")]: {
-      height: "100%",
-    }
+    [theme.breakpoints.only('xs')]: {
+      height: '100%',
+    },
   },
 }));
 
@@ -59,7 +60,7 @@ const ExplanatoryCard = ({
               <Grid container>
                 <Grid item xs={6}>
                   <SecondTitle>
-                      {secondTitle}
+                    {secondTitle}
                   </SecondTitle>
                 </Grid>
               </Grid>

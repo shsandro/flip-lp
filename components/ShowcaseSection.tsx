@@ -7,44 +7,44 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
-} from "@material-ui/core";
-import React from "react";
+} from '@material-ui/core';
+import React from 'react';
 import Fade from 'react-reveal/Fade';
-import Gears from "../components/Gears";
-import { goToSignUpType } from "../pages";
+import Gears from './Gears';
+import { goToSignUpType } from '../pages';
 
 const useStyles = makeStyles((theme) => ({
   gridImage: {
-    position: "relative",
-    marginLeft: "-15%",
+    position: 'relative',
+    marginLeft: '-15%',
     top: -1,
   },
   contrastText: {
     color: theme.palette.primary.main,
   },
   textSize: {
-    fontSize: "21px",
+    fontSize: '21px',
   },
   fullHeight: {
-    flex: "1 0 auto",
+    flex: '1 0 auto',
   },
   gears: {
-    position: "absolute",
-    marginTop: "-85%",
+    position: 'absolute',
+    marginTop: '-85%',
     zIndex: -1,
-    transform: "rotate(4deg)",
+    transform: 'rotate(4deg)',
   },
   flexContainer: {
-    display: "flex",
-    [theme.breakpoints.down("sm")]: {
-      marginTop: "-30%",
+    display: 'flex',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '-30%',
     },
   },
   imgSize: {
-    width: "140%",
-    objectFit: "cover",
-    [theme.breakpoints.up("xl")]: {
-      width: "150%",
+    width: '140%',
+    objectFit: 'cover',
+    [theme.breakpoints.up('xl')]: {
+      width: '150%',
     },
   },
 }));
@@ -52,12 +52,12 @@ const useStyles = makeStyles((theme) => ({
 const Showcase = ({ goToSignUp }:goToSignUpType) => {
   const classes = useStyles();
   const theme = useTheme();
-  const isDownMd = useMediaQuery(theme.breakpoints.down("sm"));
+  const isDownMd = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <section>
       <Container>
         <Box pb={8}>
-          <Grid container direction={isDownMd ? "column-reverse" : "row"}>
+          <Grid container direction={isDownMd ? 'column-reverse' : 'row'}>
             <Grid item sm={12} md={5} className={classes.flexContainer}>
               <Grid
                 container
@@ -76,7 +76,8 @@ const Showcase = ({ goToSignUp }:goToSignUpType) => {
                         <Box fontFamily="Gilroy-ExtraBold" pt={6}>
                           Transforme
                           <br />
-                          leads em{" "}
+                          leads em
+                          {' '}
                           <Box
                             component="span"
                             className={classes.contrastText}
@@ -120,7 +121,7 @@ const Showcase = ({ goToSignUp }:goToSignUpType) => {
                     className={classes.imgSize}
                   />
                 </Grid>
-                <Grid item xs={4} style={{ position: "relative" }}>
+                <Grid item xs={4} style={{ position: 'relative' }}>
                   <div className={classes.gears}>
                     <Fade>
                       <Gears strokeWidth={0.1} />

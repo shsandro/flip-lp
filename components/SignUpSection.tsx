@@ -4,42 +4,42 @@ import {
   Grid,
   makeStyles,
   Typography,
-} from "@material-ui/core";
-import React from "react";
-import Lunete from "./Lunete";
-import SecondTitle from "./SecondTitle";
-import Fade from "react-reveal/Fade";
-import SignUpForm from "./SignUpForm";
+} from '@material-ui/core';
+import React from 'react';
+import Fade from 'react-reveal/Fade';
+import Lunete from './Lunete';
+import SecondTitle from './SecondTitle';
+import SignUpForm from './SignUpForm';
 
 const useStyles = makeStyles((theme) => ({
   contrastText: {
     color: theme.palette.primary.main,
   },
   textSize: {
-    fontSize: "21px",
+    fontSize: '21px',
   },
   luneta: {
-    width: "65%",
-    position: "absolute",
+    width: '65%',
+    position: 'absolute',
     bottom: 20,
-    left: "-60%",
+    left: '-60%',
     zIndex: -1,
     [theme.breakpoints.down('xs')]: {
       width: 0,
-    }
+    },
   },
   lunetaHolder: {
-    position: "relative",
+    position: 'relative',
     zIndex: 0,
   },
   logo: {
-    position: "absolute",
-    top: "-5%",
-    left: "-7%",
+    position: 'absolute',
+    top: '-5%',
+    left: '-7%',
     zIndex: -1,
     [theme.breakpoints.down('xs')]: {
       width: 0,
-    }
+    },
   },
   bg: {
     background: theme.palette.grey[100],
@@ -65,7 +65,8 @@ const SignUpSection = () => {
                   <Fade left>
                     <Typography variant="h3" color="textSecondary">
                       <Box fontFamily="Gilroy-ExtraBold">
-                        Quer saber como convertemos leads em{" "}
+                        Quer saber como convertemos leads em
+                        {' '}
                         <Box component="span" className={classes.contrastText}>
                           clientes?
                         </Box>

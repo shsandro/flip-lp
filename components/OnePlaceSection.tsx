@@ -4,10 +4,10 @@ import {
   Grid,
   makeStyles,
   Typography,
-} from "@material-ui/core";
-import React from "react";
-import ExplanatoryGroup from "./ExplanatoryGroup";
-import Fade from "react-reveal/Fade";
+} from '@material-ui/core';
+import React from 'react';
+import Fade from 'react-reveal/Fade';
+import ExplanatoryGroup from './ExplanatoryGroup';
 
 const useStyles = makeStyles((theme) => ({
   contrastText: {
@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.grey[100],
   },
   hideScroll: {
-    overflow: "hidden",
-  }
+    overflow: 'hidden',
+  },
 }));
 
 const OnePlaceSection = () => {
@@ -32,7 +32,8 @@ const OnePlaceSection = () => {
               <Fade top>
                 <Typography color="textSecondary" align="center" variant="h4">
                   <Box fontFamily="Gilroy-ExtraBold">
-                    Tudo o que sua imobiliária precisa{" "}
+                    Tudo o que sua imobiliária precisa
+                    {' '}
                     <Box component="span" className={classes.contrastText}>
                       em um só lugar!
                     </Box>

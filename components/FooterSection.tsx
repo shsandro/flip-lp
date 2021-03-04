@@ -8,14 +8,14 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
-} from "@material-ui/core";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import Fade from "react-reveal/Fade";
-import React from "react";
-import { goToSignUpType } from "../pages";
+} from '@material-ui/core';
+import FacebookIcon from '@material-ui/icons/Facebook';
+// import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import Fade from 'react-reveal/Fade';
+import React from 'react';
+import { goToSignUpType } from '../pages';
 
 type SocialNetworks = {
   icon: React.ReactNode;
@@ -26,20 +26,20 @@ type SocialNetworks = {
 const socialNetworks: SocialNetworks[] = [
   {
     icon: <FacebookIcon />,
-    link: "https://facebook.com/flipcrm",
-    label: "Facebook",
+    link: 'https://facebook.com/flipcrm',
+    label: 'Facebook',
   },
   {
     icon: <InstagramIcon />,
-    link: "https://instagram.com/crmflip",
-    label: "Instagram",
+    link: 'https://instagram.com/crmflip',
+    label: 'Instagram',
   },
   // { icon: <LinkedInIcon />, link: "https://LinkedIn.com/", label: "LinkedIn" },
   {
     icon: <WhatsAppIcon />,
     link:
-      "https://api.whatsapp.com/send?phone=5544998180537&text=Ol%C3%A1%20Andr%C3%A9%2C%20visitei%20a%20sua%20p%C3%A1gina%20e%20gostaria%20de%20entender%20melhor%20como%20eu%20automatizo%20o%20processo%20dos%20meus%20leads",
-    label: "WhatsApp",
+      'https://api.whatsapp.com/send?phone=5544998180537&text=Ol%C3%A1%20Andr%C3%A9%2C%20visitei%20a%20sua%20p%C3%A1gina%20e%20gostaria%20de%20entender%20melhor%20como%20eu%20automatizo%20o%20processo%20dos%20meus%20leads',
+    label: 'WhatsApp',
   },
 ];
 
@@ -48,37 +48,37 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
   },
   textSize: {
-    fontSize: "21px",
+    fontSize: '21px',
   },
   whiteText: {
     color: theme.palette.common.white,
   },
   circle: {
     backgroundColor: theme.palette.primary.main,
-    width: "350vw",
-    height: "350vw",
-    position: "absolute",
-    borderRadius: "70%",
+    width: '350vw',
+    height: '350vw',
+    position: 'absolute',
+    borderRadius: '70%',
     top: 0,
     zIndex: -1,
   },
   footerBg: {
-    display: "flex",
-    justifyContent: "center",
-    overflow: "hidden",
-    position: "relative",
+    display: 'flex',
+    justifyContent: 'center',
+    overflow: 'hidden',
+    position: 'relative',
     height: theme.spacing(7),
   },
   imgLogo: {
-    marginTop: "0.6%",
+    marginTop: '0.6%',
   },
 }));
 const FooterSection = ({ goToSignUp }: goToSignUpType) => {
   const classes = useStyles();
   const theme = useTheme();
-  const isCellphone = useMediaQuery(theme.breakpoints.down("xs"));
+  const isCellphone = useMediaQuery(theme.breakpoints.down('xs'));
   const navigateTo = (link: string) => {
-    const win = window.open(link, "_blank");
+    const win = window.open(link, '_blank');
     win.focus();
   };
   return (
@@ -92,7 +92,8 @@ const FooterSection = ({ goToSignUp }: goToSignUpType) => {
                   <Fade left>
                     <Typography variant="h5" color="textSecondary">
                       <Box fontFamily="Gilroy-ExtraBold">
-                        Dúvidas?{" "}
+                        Dúvidas?
+                        {' '}
                         <Box component="span" className={classes.textContrast}>
                           vamos conversar!
                         </Box>
@@ -120,7 +121,7 @@ const FooterSection = ({ goToSignUp }: goToSignUpType) => {
                       fullWidth
                       onClick={() => {
                         navigateTo(
-                          "https://api.whatsapp.com/send?phone=5544998180537&text=Ol%C3%A1%20Andr%C3%A9%2C%20visitei%20a%20sua%20p%C3%A1gina%20e%20gostaria%20de%20entender%20melhor%20como%20eu%20automatizo%20o%20processo%20dos%20meus%20leads"
+                          'https://api.whatsapp.com/send?phone=5544998180537&text=Ol%C3%A1%20Andr%C3%A9%2C%20visitei%20a%20sua%20p%C3%A1gina%20e%20gostaria%20de%20entender%20melhor%20como%20eu%20automatizo%20o%20processo%20dos%20meus%20leads',
                         );
                       }}
                     >
@@ -136,7 +137,8 @@ const FooterSection = ({ goToSignUp }: goToSignUpType) => {
                   <Fade right>
                     <Typography variant="h5" color="textSecondary">
                       <Box fontFamily="Gilroy-ExtraBold">
-                        Quero{" "}
+                        Quero
+                        {' '}
                         <Box component="span" className={classes.textContrast}>
                           agendar uma apresentação.
                         </Box>
@@ -192,7 +194,7 @@ const FooterSection = ({ goToSignUp }: goToSignUpType) => {
                 >
                   {!isCellphone && (
                     <Grid item sm={2} lg={1} className={classes.imgLogo}>
-                      <img src="/flip-logo_branca.svg" />
+                      <img alt="" src="/flip-logo_branca.svg" />
                     </Grid>
                   )}
                   <Grid item xs={12} sm="auto">
@@ -203,21 +205,19 @@ const FooterSection = ({ goToSignUp }: goToSignUpType) => {
                 </Grid>
               </Grid>
               <Grid item xs="auto" sm={6}>
-                {socialNetworks.map((network) => {
-                  return (
-                    <IconButton
-                      edge="start"
-                      key={network.label}
-                      title={network.label}
-                      className={classes.whiteText}
-                      onClick={() => {
-                        navigateTo(network.link);
-                      }}
-                    >
-                      {network.icon}
-                    </IconButton>
-                  );
-                })}
+                {socialNetworks.map((network) => (
+                  <IconButton
+                    edge="start"
+                    key={network.label}
+                    title={network.label}
+                    className={classes.whiteText}
+                    onClick={() => {
+                      navigateTo(network.link);
+                    }}
+                  >
+                    {network.icon}
+                  </IconButton>
+                ))}
               </Grid>
             </Grid>
           </Container>
