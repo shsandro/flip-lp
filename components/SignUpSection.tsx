@@ -64,7 +64,7 @@ const SignUpSection = () => {
                 <Grid item xs={12}>
                   <Fade left>
                     <Typography variant="h3" color="textSecondary">
-                      <Box fontFamily="Gilroy-ExtraBold">
+                      <Box component="span" fontFamily="Gilroy-ExtraBold">
                         Quer saber como convertemos leads em
                         {' '}
                         <Box component="span" className={classes.contrastText}>

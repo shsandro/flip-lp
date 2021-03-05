@@ -44,11 +44,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 type GearsProps = {
-  strokeWidth: number,
+  strokeWidth?: number,
 };
-const Gears = (props:GearsProps) => {
+const Gears = ({ strokeWidth = 0.20 }:GearsProps) => {
   const classes = useStyles();
-  const { strokeWidth = 0.20 } = props;
   return (
     <div className={classes.root}>
       <Gear className={classes.gearClockWise} strokeWidth={strokeWidth} />

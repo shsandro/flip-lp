@@ -29,10 +29,10 @@ const ExplanatoryGroup = () => (
             é prioridade. Descubra em nossa
             ferramenta como a roleta pode
             aumentar significativamente seu
-            volume de negócios . Sem
+            volume de negócios. Sem
             processos manuais, os leads são
             recebidos e transferidos de
-            formaautomática e
+            forma automática e
             personalizada."
         />
       </Grid>

@@ -5,7 +5,7 @@ import ShowcaseSection from '../components/ShowcaseSection';
 import SignUpSection from '../components/SignUpSection';
 import FooterSection from '../components/FooterSection';
 
-export type goToSignUpType = {
+export type GoToSignUpType = {
   goToSignUp: () => void;
 };
 

@@ -11,7 +11,8 @@ import {
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import Gears from './Gears';
-import { goToSignUpType } from '../pages';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { GoToSignUpType } from '../pages';
 
 const useStyles = makeStyles((theme) => ({
   gridImage: {
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Showcase = ({ goToSignUp }:goToSignUpType) => {
+const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
   const classes = useStyles();
   const theme = useTheme();
   const isDownMd = useMediaQuery(theme.breakpoints.down('sm'));
@@ -66,7 +67,7 @@ const Showcase = ({ goToSignUp }:goToSignUpType) => {
               >
                 <Grid item xs={3} sm={2} md={3}>
                   <Box pt={8}>
-                    <img src="/flip-logo.svg" width="100%" />
+                    <img alt="logo" src="/flip-logo.svg" width="100%" />
                   </Box>
                 </Grid>
                 <Grid item md={10}>
@@ -137,4 +138,4 @@ const Showcase = ({ goToSignUp }:goToSignUpType) => {
   );
 };
 
-export default Showcase;
+export default ShowcaseSection;

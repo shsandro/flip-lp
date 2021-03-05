@@ -1,15 +1,15 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme } from '@material-ui/core/styles';
 
 const defaultTheme = createMuiTheme();
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#7E51DF",
+      main: '#7E51DF',
     },
     success: {
-      main: "#3AD29F",
-    }
+      main: '#3AD29F',
+    },
   },
   overrides: {
     MuiButton: {
@@ -21,11 +21,11 @@ const theme = createMuiTheme({
     MuiTypography: {
       colorTextSecondary: {
         color: defaultTheme.palette.grey[700],
-      }, 
+      },
     },
   },
   typography: {
-    fontFamily: `"Gilroy"`,
+    fontFamily: '"Gilroy"',
   },
 });
 

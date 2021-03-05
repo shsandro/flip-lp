@@ -34,14 +34,12 @@ const useStyles = makeStyles((theme) => ({
 type HeroProps = {
   classes?: any,
 };
-const Hero = (props:HeroProps) => {
-  const { classes } = props;
-
+const Hero = ({ classes }:HeroProps) => {
   const internalClasses = useStyles();
   return (
     <div className={clsx(internalClasses.root, classes?.root)}>
-      <img src="./hero-cover.svg" className={internalClasses.cover} />
-      <img src="./hero.svg" className={internalClasses.hero} />
+      <img alt="capa" src="./hero-cover.svg" className={internalClasses.cover} />
+      <img alt="hero" src="./hero.svg" className={internalClasses.hero} />
     </div>
   );
 };

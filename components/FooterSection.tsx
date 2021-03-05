@@ -15,7 +15,8 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import Fade from 'react-reveal/Fade';
 import React from 'react';
-import { goToSignUpType } from '../pages';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { GoToSignUpType } from '../pages';
 
 type SocialNetworks = {
   icon: React.ReactNode;
@@ -67,13 +68,19 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     overflow: 'hidden',
     position: 'relative',
-    height: theme.spacing(7),
+    height: theme.spacing(11),
+    [theme.breakpoints.only('xs')]: {
+      height: theme.spacing(19),
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+      height: theme.spacing(15),
+    },
   },
   imgLogo: {
-    marginTop: '0.6%',
+    marginTop: '0.4%',
   },
 }));
-const FooterSection = ({ goToSignUp }: goToSignUpType) => {
+const FooterSection = ({ goToSignUp }: GoToSignUpType) => {
   const classes = useStyles();
   const theme = useTheme();
   const isCellphone = useMediaQuery(theme.breakpoints.down('xs'));
@@ -108,7 +115,7 @@ const FooterSection = ({ goToSignUp }: goToSignUpType) => {
                       className={classes.textSize}
                     >
                       Clique aqui para entrar em contato através do WhatsApp,
-                      nossos consultores estão prontos para atendê-lo
+                      nossos consultores estão prontos para atendê-lo.
                     </Typography>
                   </Fade>
                 </Grid>
@@ -176,52 +183,67 @@ const FooterSection = ({ goToSignUp }: goToSignUpType) => {
         </Container>
       </Box>
       <Box pt={10}>
-        <Box className={classes.footerBg} pt={2}>
+        <Grid
+          container
+          alignItems="center"
+          alignContent="center"
+          className={classes.footerBg}
+        >
           <div className={classes.circle} />
           <Container>
-            <Grid
-              container
-              spacing={isCellphone ? 2 : 10}
-              justify="center"
-              alignItems="center"
-            >
-              <Grid item xs="auto" sm={6}>
-                <Grid
-                  container
-                  alignItems="center"
-                  justify="flex-end"
-                  spacing={2}
-                >
-                  {!isCellphone && (
-                    <Grid item sm={2} lg={1} className={classes.imgLogo}>
-                      <img alt="" src="/flip-logo_branca.svg" />
+            <Grid item xs={12}>
+              <Grid container justify="center">
+                <Grid item xs={8} sm={4}>
+                  <Grid container justify="center" alignItems="center">
+                    <Grid xs={12} md={8} lg={6}>
+                      <Grid container justify="center" spacing={1}>
+                        {!isCellphone && (
+                        <Grid item sm={2} className={classes.imgLogo}>
+                          <img alt="" src="/flip-logo_branca.svg" width="100%" />
+                        </Grid>
+                        )}
+                        <Grid item xs="auto">
+                          <Typography variant="caption" className={classes.whiteText}>
+                            Transforme Leads em Clientes!
+                          </Typography>
+                        </Grid>
+                      </Grid>
                     </Grid>
-                  )}
-                  <Grid item xs={12} sm="auto">
-                    <Typography variant="caption" className={classes.whiteText}>
-                      Transforme Leads em Clientes!
-                    </Typography>
+                    <Grid xs="auto">
+                      <Box pl={isCellphone ? 0 : 2}>
+                        <Grid container spacing={1}>
+                          <Grid item xs="auto">
+                            {socialNetworks.map((network) => (
+                              <IconButton
+                                edge="start"
+                                key={network.label}
+                                title={network.label}
+                                className={classes.whiteText}
+                                onClick={() => {
+                                  navigateTo(network.link);
+                                }}
+                              >
+                                {network.icon}
+                              </IconButton>
+                            ))}
+                          </Grid>
+                        </Grid>
+                      </Box>
+                    </Grid>
                   </Grid>
                 </Grid>
-              </Grid>
-              <Grid item xs="auto" sm={6}>
-                {socialNetworks.map((network) => (
-                  <IconButton
-                    edge="start"
-                    key={network.label}
-                    title={network.label}
-                    className={classes.whiteText}
-                    onClick={() => {
-                      navigateTo(network.link);
-                    }}
-                  >
-                    {network.icon}
-                  </IconButton>
-                ))}
+                <Grid item xs={12}>
+                  <Fade>
+                    <Typography align="center" variant="body2" className={classes.whiteText}>
+                      Avenida Tamandaré, Ed. Parque Avenue, 30 sala 04
+                      Centro, Maringá - PR.
+                    </Typography>
+                  </Fade>
+                </Grid>
               </Grid>
             </Grid>
           </Container>
-        </Box>
+        </Grid>
       </Box>
     </section>
   );

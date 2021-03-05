@@ -27,9 +27,8 @@ type LuneteProps = {
   strokeWidth?: number,
 };
 
-const Lunete = (props:LuneteProps) => {
+const Lunete = ({ strokeWidth = 0.20 }:LuneteProps) => {
   const classes = useStyles();
-  const { strokeWidth = 0.20 } = props;
 
   return (
     <div>

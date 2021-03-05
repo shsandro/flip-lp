@@ -43,7 +43,9 @@
       "import/no-named-as-default": 0,
       "react/jsx-props-no-spreading": "off",
       "import/prefer-default-export": "off",
+      "import/no-cycle": "off",
       "react/prop-types": 0,
+      "react/require-default-props": "off",
       // NextJs specific fix: suppress errors for missing 'import React' in files for nextjs
       "react/react-in-jsx-scope": "off",
       // NextJs specific fix: allow jsx syntax in js files

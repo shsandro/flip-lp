@@ -16,6 +16,7 @@ import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
 import Reward from 'react-rewards';
 import {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   FormValuesType,
   schemaValidator,
   validate,
@@ -191,7 +192,7 @@ const SignUpForm = () => {
               </Grid>
               <Grid item xs={12}>
                 <Box p={2}>
-                  <Typography align="center">
+                  <Typography component="span" align="center">
                     <Box fontWeight="fontWeightBold" fontSize="h4.fontSize">
                       Obrigado
                     </Box>
@@ -223,7 +224,7 @@ const SignUpForm = () => {
               </Grid>
               <Grid item xs={12}>
                 <Box p={2}>
-                  <Typography align="center">
+                  <Typography component="span" align="center">
                     <Box fontWeight="fontWeightBold" fontSize="h4.fontSize">
                       Oops!
                     </Box>
@@ -259,7 +260,7 @@ const SignUpForm = () => {
       <Box p={3}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Typography color="textSecondary" variant="h4">
+            <Typography component="span" color="textSecondary" variant="h4">
               <Box fontFamily="Gilroy-ExtraBold">Agendar uma apresentação!</Box>
             </Typography>
           </Grid>

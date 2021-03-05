@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "@emotion/cache": "^10.0.29",
+    "@emotion/core": "^10.0.35",
+    "create-emotion-server": "^10.0.27",
     "@material-ui/icons": "^4.11.2",
     "babel-plugin-styled-components": "^1.12.0",
     "clsx": "^1.1.1",
