@@ -55,6 +55,7 @@ const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
   const classes = useStyles();
   const theme = useTheme();
   const isDownMd = useMediaQuery(theme.breakpoints.down('sm'));
+  const isDownXs = useMediaQuery(theme.breakpoints.down('xs'));
   return (
     <section>
       <Container>
@@ -119,7 +120,7 @@ const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
                 <Grid item xs={12}>
                   <img
                     alt="background"
-                    src={isDownMd ? '/session-one-wallpaper-xs.webp' : '/session-one-wallpaper.webp'}
+                    src={isDownXs ? '/session-one-wallpaper-xs.webp' : '/session-one-wallpaper.webp'}
                     className={classes.imgSize}
                   />
                 </Grid>
