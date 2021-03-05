@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
   imgSize: {
     width: '140%',
     objectFit: 'cover',
+    height: '100%',
     [theme.breakpoints.up('xl')]: {
       width: '150%',
     },
@@ -67,7 +68,7 @@ const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
               >
                 <Grid item xs={3} sm={2} md={3}>
                   <Box pt={8}>
-                    <img alt="logo" src="/flip-logo.svg" width="100%" />
+                    <img alt="logo" src="/flip-logo.svg" height="100%" width="100%" />
                   </Box>
                 </Grid>
                 <Grid item md={10}>
@@ -118,7 +119,7 @@ const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
                 <Grid item xs={12}>
                   <img
                     alt="background"
-                    src="/session-one-wallpaper.png"
+                    src="/session-one-wallpaper.webp"
                     className={classes.imgSize}
                   />
                 </Grid>

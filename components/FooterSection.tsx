@@ -195,11 +195,11 @@ const FooterSection = ({ goToSignUp }: GoToSignUpType) => {
               <Grid container justify="center">
                 <Grid item xs={8} sm={4}>
                   <Grid container justify="center" alignItems="center">
-                    <Grid xs={12} md={8} lg={6}>
-                      <Grid container justify="center" spacing={1}>
+                    <Grid xs={12} md={9} lg={7}>
+                      <Grid container justify="center" spacing={1} alignItems="center">
                         {!isCellphone && (
-                        <Grid item sm={2} className={classes.imgLogo}>
-                          <img alt="" src="/flip-logo_branca.svg" width="100%" />
+                        <Grid item sm={2} md={3} className={classes.imgLogo}>
+                          <img alt="" src="/flip-logo_branca.svg" width="100%" height="100%" />
                         </Grid>
                         )}
                         <Grid item xs="auto">

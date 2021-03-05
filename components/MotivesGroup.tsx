@@ -81,7 +81,7 @@ const MotivesGroup = () => (
         <Motive
           icon={<Analytics />}
           text="
-          Gestionar de forma
+          Gerenciar de forma
           eficiente o financeiro e
           comissionamento.
         "

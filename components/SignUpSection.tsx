@@ -93,7 +93,7 @@ const SignUpSection = () => {
                 <Grid item xs={12}>
                   <Fade>
                     <div className={classes.logo}>
-                      <img alt="logo" src="/flip-logotipo.svg" width="75%" />
+                      <img alt="logo" src="/flip-logotipo.svg" width="75%" height="75%" />
                     </div>
                   </Fade>
                   <Fade right>
