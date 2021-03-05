@@ -79,6 +79,9 @@ const useStyles = makeStyles((theme) => ({
   imgLogo: {
     marginTop: '0.4%',
   },
+  removeScroll: {
+    overflow: 'hidden',
+  },
 }));
 const FooterSection = ({ goToSignUp }: GoToSignUpType) => {
   const classes = useStyles();
@@ -182,69 +185,71 @@ const FooterSection = ({ goToSignUp }: GoToSignUpType) => {
           </Grid>
         </Container>
       </Box>
-      <Box pt={10}>
-        <Grid
-          container
-          alignItems="center"
-          alignContent="center"
-          className={classes.footerBg}
-        >
-          <div className={classes.circle} />
-          <Container>
-            <Grid item xs={12}>
-              <Grid container justify="center">
-                <Grid item xs={8} sm={4}>
-                  <Grid container justify="center" alignItems="center">
-                    <Grid xs={12} md={9} lg={7}>
-                      <Grid container justify="center" spacing={1} alignItems="center">
-                        {!isCellphone && (
-                        <Grid item sm={2} md={3} className={classes.imgLogo}>
-                          <img alt="" src="/flip-logo_branca.svg" width="100%" height="100%" />
-                        </Grid>
-                        )}
-                        <Grid item xs="auto">
-                          <Typography variant="caption" className={classes.whiteText}>
-                            Transforme Leads em Clientes!
-                          </Typography>
-                        </Grid>
-                      </Grid>
-                    </Grid>
-                    <Grid xs="auto">
-                      <Box pl={isCellphone ? 0 : 2}>
-                        <Grid container spacing={1}>
+
+      <Box pt={10} className={classes.removeScroll}>
+        <Fade bottom>
+          <Grid
+            container
+            alignItems="center"
+            alignContent="center"
+            className={classes.footerBg}
+          >
+            <div className={classes.circle} />
+            <Container>
+              <Grid item xs={12}>
+                <Grid container justify="center">
+                  <Grid item xs={8} sm={4}>
+                    <Grid container justify="center" alignItems="center">
+                      <Grid item xs={12} md={9} lg={8}>
+                        <Grid container justify="center" spacing={1} alignItems="center">
+                          {!isCellphone && (
+                            <Grid item sm={2} md={3} className={classes.imgLogo}>
+                              <img alt="" src="/flip-logo_branca.svg" width="100%" height="100%" />
+                            </Grid>
+                          )}
                           <Grid item xs="auto">
-                            {socialNetworks.map((network) => (
-                              <IconButton
-                                edge="start"
-                                key={network.label}
-                                title={network.label}
-                                className={classes.whiteText}
-                                onClick={() => {
-                                  navigateTo(network.link);
-                                }}
-                              >
-                                {network.icon}
-                              </IconButton>
-                            ))}
+                            <Typography variant="caption" className={classes.whiteText}>
+                              Transforme Leads em Clientes!
+                            </Typography>
                           </Grid>
                         </Grid>
-                      </Box>
+                      </Grid>
+                      <Grid item xs="auto">
+                        <Box pl={isCellphone ? 0 : 2}>
+                          <Grid container spacing={1}>
+                            <Grid item xs="auto">
+                              {socialNetworks.map((network) => (
+                                <IconButton
+                                  edge="start"
+                                  key={network.label}
+                                  title={network.label}
+                                  className={classes.whiteText}
+                                  onClick={() => {
+                                    navigateTo(network.link);
+                                  }}
+                                >
+                                  {network.icon}
+                                </IconButton>
+                              ))}
+                            </Grid>
+                          </Grid>
+                        </Box>
+                      </Grid>
                     </Grid>
                   </Grid>
-                </Grid>
-                <Grid item xs={12}>
-                  <Fade>
+                  <Grid item xs={12}>
                     <Typography align="center" variant="body2" className={classes.whiteText}>
                       Avenida Tamandaré, Ed. Parque Avenue, 30 sala 04
                       Centro, Maringá - PR.
                     </Typography>
-                  </Fade>
+                  </Grid>
                 </Grid>
               </Grid>
-            </Grid>
-          </Container>
-        </Grid>
+            </Container>
+          </Grid>
+        </Fade>
       </Box>
+
     </section>
   );
 };
