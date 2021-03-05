@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import {
   Box,
   Button,
@@ -67,25 +68,23 @@ const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
                 alignContent="space-between"
                 className={classes.fullHeight}
               >
-                <Grid item xs={3} sm={2} md={3}>
+                <Grid item xs={3} sm={2} md={4} lg={3}>
                   <Box pt={8}>
                     <img alt="logo" src="/flip-logo.svg" height="100%" width="100%" />
                   </Box>
                 </Grid>
-                <Grid item md={10}>
+                <Grid item md={9} lg={10}>
                   <Grid container spacing={4}>
                     <Grid item xs={12}>
                       <Typography variant="h3" color="textSecondary">
                         <Box fontFamily="Gilroy-ExtraBold" pt={6}>
-                          Transforme
+                          Sua imobiliária
                           <br />
-                          leads em
-                          {' '}
                           <Box
                             component="span"
                             className={classes.contrastText}
                           >
-                            clientes!
+                            realmente digital!
                           </Box>
                         </Box>
                       </Typography>
@@ -95,9 +94,8 @@ const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
                         color="textSecondary"
                         className={classes.textSize}
                       >
-                        Nós temos a fórmula para manter o seu lead aquecido e o
-                        corretor comprometido, e o melhor... tudo em uma só
-                        plataforma.
+                        Seu objetivo é vender e alugar mais? Ajudamos você a fazer mais negócios!
+                        No entendimento, como imobiliaristas, essa chamada convence mais a saber mais sobre o produto.
                       </Typography>
                     </Grid>
                     <Grid item xs={12} sm={6}>
@@ -119,8 +117,8 @@ const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
               <Grid container justify="center">
                 <Grid item xs={12}>
                   <picture>
-                    <source type="image/webp" src={isDownXs ? '/Flip-Wallpaper-xs.webp' : '/Flip-Wallpaper.webp'} className={classes.imgSize} />
-                    <img alt="House Deal" src={isDownXs ? '/Flip-Wallpaper-xs.png' : '/Flip-Wallpaper.png'} className={classes.imgSize} />
+                    <source type="image/webp" src={isDownXs ? '/flip-converte-leads-em-clientes-small.webp' : '/flip-converte-leads-em-clientes.webp'} className={classes.imgSize} />
+                    <img alt="House Deal" src={isDownXs ? '/flip-converte-leads-em-clientes-small.png' : '/flip-converte-leads-em-clientes.png'} className={classes.imgSize} />
                   </picture>
                 </Grid>
                 <Grid item xs={4} style={{ position: 'relative' }}>

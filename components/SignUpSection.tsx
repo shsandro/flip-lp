@@ -65,27 +65,16 @@ const SignUpSection = () => {
                   <Fade left>
                     <Typography variant="h3" color="textSecondary">
                       <Box component="span" fontFamily="Gilroy-ExtraBold">
-                        Quer saber como convertemos leads em
+                        Venda e alugue
                         {' '}
                         <Box component="span" className={classes.contrastText}>
-                          clientes?
+                          mais!
                         </Box>
                       </Box>
                     </Typography>
                   </Fade>
                 </Grid>
 
-                <Grid item xs={12}>
-                  <Fade left>
-                    <Typography
-                      color="textSecondary"
-                      className={classes.textSize}
-                    >
-                      Entenda o que nossa fórmula pode fazer pela sua
-                      imobiliária.
-                    </Typography>
-                  </Fade>
-                </Grid>
               </Grid>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
