@@ -120,7 +120,7 @@ const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
                 <Grid item xs={12}>
                   <img
                     alt="background"
-                    src={isDownXs ? '/session-one-wallpaper-xs.webp' : '/session-one-wallpaper.webp'}
+                    src={isDownXs ? '/Flip-wallpaper-xs.webp' : '/Flip-wallpaper.webp'}
                     className={classes.imgSize}
                   />
                 </Grid>
