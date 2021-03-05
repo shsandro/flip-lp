@@ -27,7 +27,7 @@ type SocialNetworks = {
 const socialNetworks: SocialNetworks[] = [
   {
     icon: <FacebookIcon />,
-    link: 'https://facebook.com/flipcrm',
+    link: 'https://facebook.com/crmflip',
     label: 'Facebook',
   },
   {

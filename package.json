@@ -10,13 +10,15 @@
     "lint-fix": "eslint ./components/ ./pages/ -c .eslintrc.json --fix --ext tsx,jsx"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.3",
     "@emotion/cache": "^10.0.29",
     "@emotion/core": "^10.0.35",
-    "create-emotion-server": "^10.0.27",
+    "@loadable/babel-plugin": "^5.13.2",
+    "@loadable/component": "^5.14.1",
+    "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "babel-plugin-styled-components": "^1.12.0",
     "clsx": "^1.1.1",
+    "create-emotion-server": "^10.0.27",
     "firebase": "^8.2.9",
     "next": "10.0.7",
     "react": "17.0.1",

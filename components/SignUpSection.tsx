@@ -7,9 +7,7 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import Lunete from './Lunete';
-import SecondTitle from './SecondTitle';
-import SignUpForm from './SignUpForm';
+import loadable from '@loadable/component';
 
 const useStyles = makeStyles((theme) => ({
   contrastText: {
@@ -46,6 +44,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const SignUpForm = loadable(() => import('./SignUpForm'));
+const SecondTitle = loadable(() => import('./SecondTitle'));
+const Lunete = loadable(() => import('./Lunete'));
+
 const SignUpSection = () => {
   const classes = useStyles();
   return (
@@ -74,7 +76,17 @@ const SignUpSection = () => {
                     </Typography>
                   </Fade>
                 </Grid>
-
+                <Grid item xs={12}>
+                  <Fade left>
+                    <Typography
+                      color="textSecondary"
+                      className={classes.textSize}
+                    >
+                      Entenda o que nossa fórmula pode fazer pela sua
+                      imobiliária.
+                    </Typography>
+                  </Fade>
+                </Grid>
               </Grid>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>

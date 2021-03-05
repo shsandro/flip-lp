@@ -11,7 +11,7 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import Gears from './Gears';
+import loadable from '@loadable/component';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { GoToSignUpType } from '../pages';
 
@@ -51,6 +51,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+const Gears = loadable(() => import('./Gears'));
 
 const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
   const classes = useStyles();
@@ -95,7 +97,6 @@ const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
                         className={classes.textSize}
                       >
                         Seu objetivo é vender e alugar mais? Ajudamos você a fazer mais negócios!
-                        No entendimento, como imobiliaristas, essa chamada convence mais a saber mais sobre o produto.
                       </Typography>
                     </Grid>
                     <Grid item xs={12} sm={6}>

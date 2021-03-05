@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import ExplanatoryGroup from './ExplanatoryGroup';
+import loadable from '@loadable/component';
 
 const useStyles = makeStyles((theme) => ({
   contrastText: {
@@ -20,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
   },
 }));
+
+const ExplanatoryGroup = loadable(() => import('./ExplanatoryGroup'));
 
 const OnePlaceSection = () => {
   const classes = useStyles();
