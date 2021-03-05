@@ -196,9 +196,12 @@ const SignUpForm = () => {
                     <Box fontWeight="fontWeightBold" fontSize="h4.fontSize">
                       Obrigado
                     </Box>
+                  </Typography>
+                  <Typography align="center">
                     Foi uma decisão inteligente, em breve entraremos em contato
                     para agendar a sua apresentação.
-                    <Box>Também estamos ansiosos para te conhecer melhor.</Box>
+                    <br />
+                    Também estamos ansiosos para te conhecer melhor.
                   </Typography>
                 </Box>
               </Grid>
@@ -228,9 +231,14 @@ const SignUpForm = () => {
                     <Box fontWeight="fontWeightBold" fontSize="h4.fontSize">
                       Oops!
                     </Box>
+                  </Typography>
+                  <Typography align="center">
                     No momento estamos recebendo muitas requisições e
                     infelizmente não foi possivel finalizar o seu cadastro
-                    <Box>Tente novamente mais tarde.</Box>
+                    <br />
+                    Tente novamente mais tarde.
+                  </Typography>
+                  <Typography component="span" align="center">
                     <Box pt={2} fontWeight="fontWeightBold">
                       Não quer esperar?
                       <br />

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import Document, {
   Html, Head, Main, NextScript,
@@ -9,11 +10,22 @@ import { cache } from './_app';
 
 const { extractCritical } = createEmotionServer(cache);
 
+const googleTag = () => ({
+  __html: `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0XSSDTM3SN');
+    `,
+});
+
 export default class MyDocument extends Document {
   render() {
     return (
       <Html>
         <Head>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-0XSSDTM3SN" />
+          <script dangerouslySetInnerHTML={googleTag()} />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/favicon.ico" />
