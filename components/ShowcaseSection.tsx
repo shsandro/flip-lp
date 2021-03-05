@@ -118,11 +118,10 @@ const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
             <Grid item sm={12} md={7} className={classes.gridImage}>
               <Grid container justify="center">
                 <Grid item xs={12}>
-                  <img
-                    alt="background"
-                    src={isDownXs ? '/Flip-Wallpaper-xs.webp' : '/Flip-Wallpaper.webp'}
-                    className={classes.imgSize}
-                  />
+                  <picture>
+                    <source type="image/webp" src={isDownXs ? '/Flip-Wallpaper-xs.webp' : '/Flip-Wallpaper.webp'} className={classes.imgSize} />
+                    <img alt="background" src={isDownXs ? '/Flip-Wallpaper-xs.webp' : '/Flip-Wallpaper.webp'} className={classes.imgSize} />
+                  </picture>
                 </Grid>
                 <Grid item xs={4} style={{ position: 'relative' }}>
                   <div className={classes.gears}>
