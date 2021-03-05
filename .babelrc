@@ -22,8 +22,7 @@
             "displayName": true,
             "preprocess": false
           }
-        ],
-        ["@loadable/babel-plugin"]
+        ]
       ],
       "presets": ["next/babel"]
     }

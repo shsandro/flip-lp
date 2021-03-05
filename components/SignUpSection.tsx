@@ -7,7 +7,9 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import loadable from '@loadable/component';
+import Lunete from './Lunete';
+import SecondTitle from './SecondTitle';
+import SignUpForm from './SignUpForm';
 
 const useStyles = makeStyles((theme) => ({
   contrastText: {
@@ -43,10 +45,6 @@ const useStyles = makeStyles((theme) => ({
     background: theme.palette.grey[100],
   },
 }));
-
-const SignUpForm = loadable(() => import('./SignUpForm'));
-const SecondTitle = loadable(() => import('./SecondTitle'));
-const Lunete = loadable(() => import('./Lunete'));
 
 const SignUpSection = () => {
   const classes = useStyles();

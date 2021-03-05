@@ -1,8 +1,6 @@
 import { Grid } from '@material-ui/core';
 import React from 'react';
-import loadable from '@loadable/component';
-
-const ExplanatoryCard = loadable(() => import('./ExplanatoryCard'));
+import ExplanatoryCard from './ExplanatoryCard';
 
 const ExplanatoryGroup = () => (
   <>

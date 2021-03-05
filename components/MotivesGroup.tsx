@@ -4,12 +4,10 @@ import HeadsetMicIcon from '@material-ui/icons/HeadsetMic';
 import SentimentVerySatisfiedOutlinedIcon from '@material-ui/icons/SentimentVerySatisfiedOutlined';
 import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined';
 import Fade from 'react-reveal/Fade';
-import loadable from '@loadable/component';
+import Motive from './Motive';
 import Robot from './icons/Robot';
 import Analytics from './icons/Analytics';
 import Shield from './icons/Shield';
-
-const Motive = loadable(() => import('./Motive'));
 
 const MotivesGroup = () => (
   <Grid container spacing={6}>

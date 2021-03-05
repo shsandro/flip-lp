@@ -11,7 +11,7 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import loadable from '@loadable/component';
+import Gears from './Gears';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { GoToSignUpType } from '../pages';
 
@@ -51,8 +51,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-
-const Gears = loadable(() => import('./Gears'));
 
 const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
   const classes = useStyles();

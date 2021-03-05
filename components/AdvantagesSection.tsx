@@ -8,7 +8,9 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import loadable from '@loadable/component';
+import SecondTitle from './SecondTitle';
+import MotivesGroup from './MotivesGroup';
+import Hero from './Hero';
 
 const useStyles = makeStyles((theme) => ({
   contrastText: {
@@ -21,10 +23,6 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
   },
 }));
-
-const Hero = loadable(() => import('./Hero'));
-const MotivesGroup = loadable(() => import('./MotivesGroup'));
-const SecondTitle = loadable(() => import('./SecondTitle'));
 
 const AdvantagesSection = () => {
   const classes = useStyles();
