@@ -117,7 +117,7 @@ const ShowcaseSection = ({ goToSignUp }:GoToSignUpType) => {
               <Grid container justify="center">
                 <Grid item xs={12}>
                   <picture>
-                    <source type="image/webp" srcSet={isDownXs ? '/flip-converte-leads-em-clientes-small.webp' : '/flip-converte-leads-em-clientes.webp'} className={classes.imgSize} />
+                    <source srcSet={isDownXs ? '/flip-converte-leads-em-clientes-small.webp' : '/flip-converte-leads-em-clientes.webp'} type="image/webp" />
                     <img alt="Flip converte leads em clientes" src={isDownXs ? '/flip-converte-leads-em-clientes-small.png' : '/flip-converte-leads-em-clientes.png'} className={classes.imgSize} />
                   </picture>
                 </Grid>
