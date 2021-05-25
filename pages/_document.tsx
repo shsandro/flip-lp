@@ -58,8 +58,8 @@ export default class MyDocument extends Document {
           <meta property="og:title" content="Sua imobiliária realmente digital!" />
           <meta property="og:site_name" content="Flip" />
           <meta property="og:description" content="Seu objetivo é vender e alugar mais? Ajudamos você a fazer mais negócios!" />
-          <meta property="og:image" content="https://www.flipcrm.com.br/flip-logotipo.svg" />
-          <meta property="og:image:type" content="image/svg+xml" />
+          <meta property="og:image" content="https://www.flipcrm.com.br/OG-image.png" />
+          <meta property="og:image:type" content="image/png" />
           <meta property="og:image:width" content="400" />
           <meta property="og:image:height" content="400" />
         </Head>
