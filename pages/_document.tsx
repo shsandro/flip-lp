@@ -53,6 +53,15 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/favicon.ico" />
+                    <meta property="og:locale" content="pt_BR" />
+          <meta property="og:url" content="https://www.flipcrm.com.br" />
+          <meta property="og:title" content="Sua imobiliária realmente digital!" />
+          <meta property="og:site_name" content="Flip" />
+          <meta property="og:description" content="Seu objetivo é vender e alugar mais? Ajudamos você a fazer mais negócios!" />
+          <meta property="og:image" content="https://www.flipcrm.com.br/flip-converte-leads-em-clientes-small.png" />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="400" />
+          <meta property="og:image:height" content="400" />
         </Head>
         <body>
           <Main />
