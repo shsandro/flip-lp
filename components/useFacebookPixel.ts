@@ -1,21 +1,24 @@
 type FacebookPixel = {
-    subscribe: () => void;
+  subscribe: () => void;
+};
+
+const useFacebookPixel = (): FacebookPixel => {
+  const trackEvent = (event: string) => {
+    if (fbq) {
+      fbq('track', event,
+        {
+          registration_result: true,
+        });
+    }
   };
-  
-  const useFacebookPixel = (): FacebookPixel => {
-    const trackEvent = (event: string) => {
-      if (fbq) {
-        fbq('track', event);
-      }
-    };
-  
-    const subscribe = () => {
-      trackEvent('Subscribe');
-    };
-  
-    return {
-      subscribe,
-    };
+
+  const subscribe = () => {
+    trackEvent('Subscribe');
   };
-  
-  export default useFacebookPixel;
+
+  return {
+    subscribe,
+  };
+};
+
+export default useFacebookPixel;
