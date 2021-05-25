@@ -21,6 +21,7 @@ import {
   schemaValidator,
   validate,
 } from './SignUpFormValidators';
+import useFacebookPixel from './useFacebookPixel';
 
 export type UserDataType = {
   email: string;
@@ -85,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
 const SignUpForm = () => {
   const classes = useStyles();
   const refReward = useRef(null);
+  const facebookPixel = useFacebookPixel();
 
   const [formValues, setFormValues] = useState<FormValuesType | undefined>({
     email: undefined,
@@ -153,6 +155,7 @@ const SignUpForm = () => {
         setTimeout(() => {
           refReward.current.rewardMe();
         }, 500);
+        facebookPixel.subscribe();
       } else {
         setErrorSubmit(true);
       }

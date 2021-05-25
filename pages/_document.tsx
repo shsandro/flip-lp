@@ -38,7 +38,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-        <script dangerouslySetInnerHTML={facebookPixel()} />
+          <script dangerouslySetInnerHTML={facebookPixel()} />
           <noscript>
             <img
               height="1"
@@ -53,7 +53,7 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/favicon.ico" />
-                    <meta property="og:locale" content="pt_BR" />
+          <meta property="og:locale" content="pt_BR" />
           <meta property="og:url" content="https://www.flipcrm.com.br" />
           <meta property="og:title" content="Sua imobiliária realmente digital!" />
           <meta property="og:site_name" content="Flip" />
