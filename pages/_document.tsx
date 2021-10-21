@@ -38,27 +38,40 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <script src="//code-sa1.jivosite.com/widget/IC19Vp2268" async />
           <script dangerouslySetInnerHTML={facebookPixel()} />
           <noscript>
             <img
               height="1"
               width="1"
               alt="facebook pixel"
-              style={{ display: 'none' }}
+              style={{ display: "none" }}
               src="https://www.facebook.com/tr?id=496665948447459&ev=PageView&noscript=1"
             />
           </noscript>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-0XSSDTM3SN" />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-0XSSDTM3SN"
+          />
           <script dangerouslySetInnerHTML={googleTag()} />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/favicon.ico" />
           <meta property="og:locale" content="pt_BR" />
           <meta property="og:url" content="https://www.flipcrm.com.br" />
-          <meta property="og:title" content="Sua imobiliária realmente digital!" />
+          <meta
+            property="og:title"
+            content="Sua imobiliária realmente digital!"
+          />
           <meta property="og:site_name" content="Flip" />
-          <meta property="og:description" content="Seu objetivo é vender e alugar mais? Ajudamos você a fazer mais negócios!" />
-          <meta property="og:image" content="https://www.flipcrm.com.br/OG-image.png" />
+          <meta
+            property="og:description"
+            content="Seu objetivo é vender e alugar mais? Ajudamos você a fazer mais negócios!"
+          />
+          <meta
+            property="og:image"
+            content="https://www.flipcrm.com.br/OG-image.png"
+          />
           <meta property="og:image:type" content="image/png" />
           <meta property="og:image:width" content="400" />
           <meta property="og:image:height" content="400" />
