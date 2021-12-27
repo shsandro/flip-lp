@@ -131,7 +131,7 @@ const FooterSection = ({ goToSignUp }: GoToSignUpType) => {
                       fullWidth
                       onClick={() => {
                         navigateTo(
-                          'https://api.whatsapp.com/send?phone=5544998180537&text=Ol%C3%A1%20Andr%C3%A9%2C%20visitei%20a%20sua%20p%C3%A1gina%20e%20gostaria%20de%20entender%20melhor%20como%20eu%20automatizo%20o%20processo%20dos%20meus%20leads',
+                          "https://api.whatsapp.com/send?phone=5544984492772&text=Ol%C3%A1%20%C3%89rica%2C%20visitei%20a%20sua%20p%C3%A1gina%20e%20gostaria%20de%20entender%20melhor%20como%20eu%20automatizo%20o%20processo%20dos%20meus%20leads"
                         );
                       }}
                     >
